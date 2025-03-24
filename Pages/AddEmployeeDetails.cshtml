@@ -1,0 +1,63 @@
+@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2 style="text-align: center;">Employees List</h2>
+
+<!-- ✅ Show success message if available -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div style="color: green; background-color: #d4edda; padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 15px;">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<table style="width: 100%; border-collapse: collapse; border: 1px solid black;">
+    <thead>
+        <tr style="background-color: #f2f2f2;">
+            <th style="padding: 12px; border: 1px solid black;">Employee ID</th>
+            <th style="padding: 12px; border: 1px solid black;">Employee Name</th> 
+            <th style="padding: 12px; border: 1px solid black;">Date of Birth</th>
+            <th style="padding: 12px; border: 1px solid black;">Date of Joining</th>
+            <th style="padding: 12px; border: 1px solid black;">Email</th>
+            <th style="padding: 12px; border: 1px solid black; text-align: center;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.Employees)
+        {
+            <tr style="border: 1px solid black;">
+                <td style="padding: 10px; border: 1px solid black;">@emp.EmployeeID</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.EmployeeName</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.DateOfJoining.ToString("yyyy-MM-dd")</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.Email</td>
+                <td style="padding: 10px; border: 1px solid black; text-align: center;">
+                    <!-- ✏️ Edit Button -->
+                    <a asp-page="Edit" asp-route-id="@emp.EmployeeID" 
+                        style="padding:6px 12px; background-color:brown; color:white; text-decoration:none; border:none; border-radius:5px; cursor:pointer; margin-right: 5px; display: inline-block;">
+                        Edit
+                    </a>
+
+                    <!-- ❌ Delete Button -->
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@emp.EmployeeID" style="display:inline;">
+                        <button type="submit" 
+                            style="padding:6px 12px; background-color:brown; color:white; border:none; border-radius:5px; cursor:pointer;">
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- ✅ Back Button Styling -->
+<div style="text-align: left; margin-top: 20px;">
+    <a href="/" style="padding:10px 20px; background-color:#6c757d; color:white; text-decoration:none; border-radius:5px; display:inline-block;">
+        Back
+    </a>
+</div>

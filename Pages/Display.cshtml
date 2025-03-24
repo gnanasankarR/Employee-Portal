@@ -1,0 +1,31 @@
+@page
+@model MyWebApp.Pages.DisplayModel
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<h2 style="text-align: center;">Submitted Employee Details</h2>
+
+<table style="width:100%; border-collapse: collapse; text-align: left;">
+    <thead style="background-color: #f2f2f2;">
+        <tr>
+            <th style="padding: 10px; border: 1px solid black;">Employee ID</th>
+            <th style="padding: 10px; border: 1px solid black;">Name</th>
+            <th style="padding: 10px; border: 1px solid black;">Email</th>
+            <th style="padding: 10px; border: 1px solid black;">Date of Birth</th>
+            <th style="padding: 10px; border: 1px solid black;">Date of Joining</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.Employees)
+        {
+            <tr>
+                <td style="padding: 10px; border: 1px solid black;">@emp.EmployeeID</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.EmployeeName</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.Email</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                <td style="padding: 10px; border: 1px solid black;">@emp.DateOfJoining.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,109 @@
+@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "New Page";
+}
+
+<h1 style="text-align: center; margin-bottom: 20px;">Add Employee Details</h1>
+
+<style>
+    .form-container {
+        width: 50%;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .form-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        width: 160px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    .form-group input:focus {
+        border-color: rgb(146, 25, 28);
+        outline: none;
+    }
+
+    .submit-button {
+        display: block;
+        width: 60%;
+        padding: 12px;
+        background-color: rgb(146, 25, 28);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .submit-button:hover {
+        background-color: brown;
+    }
+
+        .form-group {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .form-group label {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="form-container">
+    <form method="post">
+        <div class="form-group">
+            <label for="EmployeeName">Employee Name:</label>
+            <input type="text" id="EmployeeName" name="Employee.EmployeeName" autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="DateOfBirth">Date of Birth:</label>
+            <input type="date" id="DateOfBirth" name="Employee.DateOfBirth" autocomplete="bday" required>
+        </div>
+
+        <div class="form-group">
+            <label for="EmployeeID">Employee ID:</label>
+            <input type="text" id="EmployeeID" name="Employee.EmployeeID" autocomplete="off" required>
+        </div>
+
+        <div class="form-group">
+            <label for="DateOfJoining">Date of Joining:</label>
+            <input type="date" id="DateOfJoining" name="Employee.DateOfJoining" autocomplete="off" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="Employee.Email" autocomplete="email" required>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>

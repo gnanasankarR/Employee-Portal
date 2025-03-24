@@ -1,0 +1,28 @@
+@page
+@model MyWebApp.Pages.IndexModel
+@{
+    ViewData["Title"] = "EmployeeForm";
+}
+
+<div class="form-container">
+    <h2>Employee Form</h2>
+
+   <form method="post">
+    <label>Employee Name:</label>
+    <input type="text" asp-for="Employee.EmployeeName" required /> /><br><br>
+
+    <label>Date of Birth:</label>
+    <input type="date" asp-for="Employee.DateOfBirth" required /><br><br>
+
+    <label>Employee ID:</label>
+    <input type="text" asp-for="Employee.EmployeeID" required /><br><br>
+
+    <label>Date of Joining:</label>
+    <input type="date" asp-for="Employee.DateOfJoining" required /><br><br>
+
+    <label>Email:</label>
+    <input type="email" asp-for="Employee.Email" required />
+    <span asp-validation-for="Employee.Email"></span>
+
+    <button type="submit">Submit</button>
+</form>
