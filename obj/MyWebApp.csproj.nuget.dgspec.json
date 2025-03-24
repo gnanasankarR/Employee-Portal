@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "e:\\WebApp\\Employee-Portal\\MyWebApp.csproj": {}
+    "E:\\WebApp\\Employee-Portal\\MyWebApp.csproj": {}
   },
   "projects": {
-    "e:\\WebApp\\Employee-Portal\\MyWebApp.csproj": {
+    "E:\\WebApp\\Employee-Portal\\MyWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\WebApp\\Employee-Portal\\MyWebApp.csproj",
+        "projectUniqueName": "E:\\WebApp\\Employee-Portal\\MyWebApp.csproj",
         "projectName": "MyWebApp",
-        "projectPath": "e:\\WebApp\\Employee-Portal\\MyWebApp.csproj",
+        "projectPath": "E:\\WebApp\\Employee-Portal\\MyWebApp.csproj",
         "packagesPath": "C:\\Users\\GnanaSankar\\.nuget\\packages\\",
-        "outputPath": "e:\\WebApp\\Employee-Portal\\obj\\",
+        "outputPath": "E:\\WebApp\\Employee-Portal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GnanaSankar\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,8 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -66,6 +66,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.13, 8.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
