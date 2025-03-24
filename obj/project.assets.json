@@ -4715,11 +4715,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyWebApp\\MyWebApp.csproj",
+      "projectUniqueName": "e:\\WebApp\\Employee-Portal\\MyWebApp.csproj",
       "projectName": "MyWebApp",
-      "projectPath": "D:\\MyWebApp\\MyWebApp.csproj",
+      "projectPath": "e:\\WebApp\\Employee-Portal\\MyWebApp.csproj",
       "packagesPath": "C:\\Users\\GnanaSankar\\.nuget\\packages\\",
-      "outputPath": "D:\\MyWebApp\\obj\\",
+      "outputPath": "e:\\WebApp\\Employee-Portal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GnanaSankar\\AppData\\Roaming\\NuGet\\NuGet.Config"
